@@ -109,7 +109,7 @@ ErrorMessage.Position = UDim2.new(0, 0, -0.0660377368, 0)
 ErrorMessage.Size = UDim2.new(1, 0, 1, -37)
 ErrorMessage.ZIndex = 8
 ErrorMessage.Font = Enum.Font.SourceSans
-ErrorMessage.Text = msg.. "\n(Error Code: 267)"
+ErrorMessage.Text = "You have been kicked from this experience:" ..msg.. "\n(Error Code: 267)"
 ErrorMessage.TextColor3 = Color3.fromRGB(189, 190, 190)
 ErrorMessage.TextSize = 20.000
 ErrorMessage.TextWrapped = true
@@ -142,17 +142,6 @@ ButtonText.Font = Enum.Font.SourceSans
 ButtonText.Text = "Leave"
 ButtonText.TextColor3 = Color3.fromRGB(35, 37, 39)
 ButtonText.TextSize = 20.000
-
-local function IMIU_fake_script()
-	local script = Instance.new('LocalScript', LeaveButton)
-
-	wait()
-	script.Parent.MouseButton1Click:Connect(function()
-		script.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Enabled = false
-		game:GetService("Lighting").nigeria:Destroy()
-	end)
-end
-coroutine.wrap(IMIU_fake_script)()
 local function HDQHLMQ_fake_script()
 	local script = Instance.new('LocalScript', FakeKick)
 
@@ -167,7 +156,7 @@ return Message
 end
 
 function Message:Crash(msg)
-messagebox(msg, "Roblox Crash", 0)
+messagebox(msg, "404 Roblox", 0)
 return Message
 end
 
